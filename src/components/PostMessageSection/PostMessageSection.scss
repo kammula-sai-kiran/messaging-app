@@ -1,0 +1,19 @@
+.post-message-section {
+    position: fixed;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 100px); 
+    .input-message {
+        width: calc(100% - 60px);
+    }
+}
+.reply {
+    position: unset;
+}
+
+.send-button {
+    display: flex;
+    align-items: center;
+}
