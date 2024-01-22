@@ -7,7 +7,7 @@ const MessageBoard = () => {
 
   return (
     <div className="message-board">
-      <h1 className="title" >Message Board</h1>
+      <h1 className="title" >Messaging App</h1>
       <MessageList></MessageList>
       <PostMessageSection ></PostMessageSection>
     </div>

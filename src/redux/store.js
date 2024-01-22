@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import messageBoardReducer from './reducers';
+import messagingAppReducer from './reducers';
 
 const store = configureStore({
   reducer: {
-    messageBoard: messageBoardReducer,
+    messagingApp: messagingAppReducer,
   },
 });
 

@@ -5,7 +5,7 @@ import MessageCard from "../MessageCard";
 import "./MessageList.scss";
 
 const MessageList = () => {
-  const allMessages = useSelector((s) => s?.messageBoard?.allMessages);
+  const allMessages = useSelector((s) => s?.messagingApp?.allMessages);
 
   return (
     <div className="message-list">

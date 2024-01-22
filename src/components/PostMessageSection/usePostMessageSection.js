@@ -9,11 +9,13 @@ const usePostMessageSection = (variant, messageId, setShowReplyBox) => {
     setTextMessage(event.target.value);
   };
 
+  // Function that returns current date and time in readble format
   const generateCurrentDate = () => {
     const currentDate = new Date().toLocaleString();
     return currentDate;
   }
 
+  // Funtion that genrates the message object to be stored in redux store
   const generateMessage = () => {
       return {
         id: Math.floor(Math.random() * 100000) + 1,
@@ -23,12 +25,14 @@ const usePostMessageSection = (variant, messageId, setShowReplyBox) => {
       }
   }
 
+  // Function that handles the send functinlaity for messages and replies
   const handlePostClick = () => {
     textMessage && dispatch(variant === "reply" ? addNewReply({messageId, reply: generateMessage() }) : addNewMessage(generateMessage()));
     setTextMessage("");
     variant === "reply" && setShowReplyBox(false);
   };
 
+  // Fucntion that handles enter press for messages and replies
   const handleKeyDown = (e) => {
     if(e.key === 'Enter')
     {

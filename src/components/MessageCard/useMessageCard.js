@@ -6,6 +6,8 @@ const useMessageCard = (variant) => {
   const [showReplyBox, setShowReplyBox] = useState(false);
   const dispatch = useDispatch();
 
+
+  // Function that dispatches an action to delete a message 
   const handleMessageDelete = (id, parentId) => {
     dispatch(variant === "message" ? deleteMessage(id) : deleteReply({id, parentId}) )
   }

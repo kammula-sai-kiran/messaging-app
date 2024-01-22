@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const messageBoardSlice = createSlice({
-  name: "messageBoard",
+const messagingAppSlice = createSlice({
+  name: "messagingApp",
   initialState: {
     allMessages: [],
   },
@@ -23,7 +23,6 @@ const messageBoardSlice = createSlice({
     },
     addNewReply: (state, action) => {
       const {messageId, reply} = action.payload;
-
       const requiredMessage =  state.allMessages.find(message => message.id === messageId);
       requiredMessage?.children?.length ? requiredMessage.children.push(reply) : requiredMessage.children = [reply]
 
@@ -37,5 +36,5 @@ export const {
     addNewReply,
     deleteMessage,
     deleteReply,
-} = messageBoardSlice.actions;
-export default messageBoardSlice.reducer;
+} = messagingAppSlice.actions;
+export default messagingAppSlice.reducer;
